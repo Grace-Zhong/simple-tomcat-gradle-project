@@ -1,0 +1,42 @@
+
+
+plugins {
+    id 'java'
+    id 'war'
+//    id 'com.bmuschko.tomcat'
+}
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'org.apache.tomcat:tomcat-annotations-api:10.1.7'
+    implementation 'org.apache.tomcat:tomcat-dbcp:10.1.7'
+    implementation  'org.apache.tomcat.embed:tomcat-embed-core:10.1.7'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-el:10.1.7'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:10.1.7'
+    implementation 'org.apache.tomcat.experimental:tomcat-embed-programmatic:10.1.7'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-websocket:10.1.7'
+
+    implementation 'org.springframework:spring-webmvc:5.3.13'
+
+    implementation  'javax.servlet:javax.servlet-api:4.0.1'
+
+    implementation 'org.springframework.ws:spring-ws-core:3.0.10.RELEASE'
+    implementation 'org.springframework:spring-webmvc:5.3.27'
+
+    implementation 'javax.xml:jaxrpc-api:1.1'
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+    implementation 'javax.xml.ws:jaxws-api:2.3.1'
+}
+
+test {
+    useJUnitPlatform()
+}
